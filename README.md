@@ -1,9 +1,8 @@
 # Buzzer
 
-when operated, this code runs a 
 this program requires an arduino UNO to operate correctly.
 
-#### Operation
+### Operation
 on startup, all LED's will be off. no player's button will operate. 
 
 to run, operator must hit master button, and no player buttons muct be active. 
@@ -14,11 +13,11 @@ after a set time the lights flash indicating time is up to answer.
 
 at any point, the operator can press the master button as a reset to allow players to ring in again.
 
-#### KNOWN BUGS
+### KNOWN BUGS
 
 I don't know why, but occassionally LED's will auto flash at seemingly random integers after a player has rung in and time has expired.
 
-#### pinouts
+### pinouts for proper operation on arduino UNO
 
 Digital pin 2; master button state
 Digital pin 7; player 1 button state
