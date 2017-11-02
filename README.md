@@ -19,13 +19,25 @@ I don't know why, but occassionally LED's will auto flash at seemingly random in
 
 ### pinouts for proper operation on arduino UNO
 
+#### Buttons
+
 Digital pin 2; master button state
+
 Digital pin 7; player 1 button state
+
 Digital pin 9; player 2 button state
+
 Digital pin 11; connect player 3 button state
+
+
+#### LED's or indicators
+
 Digital pin 8; LED saying player 1 has rung in first.
+
 Digital pin 10; LED saying player 2 has rung in first.
+
 Digital pin 12; LED saying player 3 has rung in first.
+
 Digital pin 13; on arduino UNO, it is linked to the onboard LED. tells operator players can currently ring in.
 
 
