@@ -19,6 +19,8 @@ I don't know why, but occassionally LED's will auto flash at seemingly random in
 
 ### pinouts for proper operation on arduino UNO
 
+pins on UNO you plug your LED's and buttons into.
+
 #### Buttons
 
 Digital pin 2; master button state
