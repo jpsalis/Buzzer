@@ -3,18 +3,22 @@
 when operated, this code runs a 
 this program requires an arduino UNO to operate correctly.
 
-## Operation
+#### Operation
 on startup, all LED's will be off. no player's button will operate. 
 
-to run, operator must hit master switch. when pressed, the onboard LED on pin 13 remains HIGH until a player rings in. then, the corresponding LED for the player lights up.
+to run, operator must hit master button, and no player buttons muct be active. 
+
+when true, the onboard LED on pin 13 remains HIGH until a player rings in. the corresponding LED for the player then lights up.
 
 after a set time the lights flash indicating time is up to answer.
 
-## KNOWN BUGS
+at any point, the operator can press the master button as a reset to allow players to ring in again.
 
-I don't know why, but occassionally LED's will auto flash at seemingly random integers. 
+#### KNOWN BUGS
 
-## pinouts
+I don't know why, but occassionally LED's will auto flash at seemingly random integers after a player has rung in and time has expired.
+
+#### pinouts
 
 Digital pin 2; master button state
 Digital pin 7; player 1 button state
