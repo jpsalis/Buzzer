@@ -80,18 +80,20 @@ void loop() {
     if (player1 == HIGH) {
       Serial.println("player 1");
       digitalWrite(led1, HIGH);
+    } 
+    else { 
+      if (player2 == HIGH) {
+        Serial.println("player 2");
+        digitalWrite(led2, HIGH);
+      } 
+      else { 
+        if (player3 == HIGH) {
+          Serial.println("player 3");
+          digitalWrite(led3, HIGH);
+          Serial.println("");
+        }
+      }
     }
-
-    if (player2 == HIGH) {
-      Serial.println("player 2");
-      digitalWrite(led2, HIGH);
-    }
-
-    if (player3 == HIGH) {
-      Serial.println("player 3");
-      digitalWrite(led3, HIGH);
-    }
-    Serial.println("");
     timeBuzzerActive = millis();
     msPressed = masterSwitch;
   }
