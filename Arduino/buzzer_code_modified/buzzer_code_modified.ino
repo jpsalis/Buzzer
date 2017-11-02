@@ -13,11 +13,11 @@ const int masterSwitchPin = 2;
 const int led = 13;
 
 //changing vars
-int player1 = 0;
-int player2 = 0;
-int player3 = 0;
-int masterSwitch = 0;
-int prevMasterSwitch = 0;
+int player1 = 0; //current state of player 1 button
+int player2 = 0; //current state of player 2 button
+int player3 = 0; //current state of player 3 button
+int masterSwitch = 0; //current state of operator button
+int prevMasterSwitch = 0; //state of masterSwitch in last loop
 int timeSincePress = 0;
 int timeBuzzerActive = 0;
 int timeBuzzerOff = timeToAns + timeBuzzerOn;
@@ -45,6 +45,7 @@ void loop() {
   Serial.println(millis());
   timeSincePress = millis() - timeBuzzerActive;
 
+  //tests if player answered in timeframe and 
   if (timeSincePress >= timeToAns && timeSincePress < timeBuzzerOff && msPressed == HIGH) {
 
     digitalWrite(led1, HIGH);
@@ -59,19 +60,15 @@ void loop() {
     digitalWrite(led3, LOW);
   }
 
-  if (masterSwitch == HIGH && prevMasterSwitch != masterSwitch) {
+  //makes sure that even if master switch is held, players can still ring in.
+  if (masterSwitch == HIGH && prevMasterSwitch != masterSwitch && player1 == LOW && player2 == LOW && player3 == LOW) {
 
     digitalWrite(led, HIGH);
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
     digitalWrite(led3, LOW);
-    player1 = LOW;
-    player2 = LOW;
-    player3 = LOW;
     Serial.print("Who buzzed first: ");
     while (player1 == LOW && player2 == LOW && player3 == LOW) {
-
-
       player1 = digitalRead(player1Pin);
       player2 = digitalRead(player2Pin);
       player3 = digitalRead(player3Pin);
@@ -96,7 +93,11 @@ void loop() {
     }
     timeBuzzerActive = millis();
     msPressed = masterSwitch;
+    player1 == LOW;
+    player2 == LOW;
+    player3 == LOW;
   }
+  
   prevMasterSwitch = masterSwitch;
   //Serial.println("end of loop");
 
