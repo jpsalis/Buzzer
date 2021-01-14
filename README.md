@@ -13,9 +13,6 @@ after a set time the lights flash indicating time is up to answer.
 
 at any point, the operator can press the master button as a reset to allow players to ring in again.
 
-### KNOWN BUGS
-
-I don't know why, but occassionally LED's will auto flash at seemingly random integers after a player has rung in and time has expired.
 
 ### pinouts for proper operation on arduino UNO
 
