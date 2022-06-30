@@ -1,6 +1,6 @@
 # Buzzer
 
-this program is designed for the Arduino Uno board, some changes will be required for other platforms. 
+this program is designed for the Arduino Uno, some changes will be required if run on other platforms. 
 
 ### Operation
 on startup, all LED's will be off. no player's button will operate. 
